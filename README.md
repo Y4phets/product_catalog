@@ -3,8 +3,8 @@ Django Rest Framework
 После зугрузки из GIT'a для запуска проекта нужно:
 
 # Сделать миграции 
-(корень проекта)$ python manage.py makemigrations
-(корень проекта)$ python manage.py migrate
+ 1 (корень проекта)$ python manage.py makemigrations
+ 2 (корень проекта)$ python manage.py migrate
 # Для входа под администратором нужно создать администратора
 (корень проекта)$ python manage.py createsuperuser
 # Запустить на локальном сервере
