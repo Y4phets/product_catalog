@@ -38,7 +38,7 @@ env/
 build/
 develop-eggs/
 dist/
-.ide/
+.idea/
 downloads/
 product_images/
 eggs/
