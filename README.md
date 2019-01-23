@@ -12,7 +12,7 @@ Django Rest Framework
 
 # URL:
 
-'''
+```
 #product_catalog/urls.py
 
 urlpatterns = [
@@ -34,4 +34,4 @@ urlpatterns = [
     path('', views.JournalList.as_view()),            //страница расположена на journal/
     path('<int:pk>/', views.JournalDetail.as_view()), //по первичному ключу записи, страница расположена на journal/# 
 ]
-'''
+```
