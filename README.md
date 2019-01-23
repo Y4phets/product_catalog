@@ -5,7 +5,8 @@ Django Rest Framework
 Сделать миграции 
 (корень проекта)$ python manage.py makemigrations
 (корень проекта)$ python manage.py migrate
-
+Для входа под администратором нужно создать администратора
+(корень проекта)$ python manage.py createsuperuser
 Запустить на локальном сервере
 (корень проекта)$ python manage.py runserver
 
@@ -31,6 +32,3 @@ urlpatterns = [
     path('', views.JournalList.as_view()), //страница расположена на journal/
     path('<int:pk>/', views.JournalDetail.as_view()), //по первичному ключу записи, страница расположена на journal/# 
 ]
-
-Для входа под администратором
-(корень проекта)$ python manage.py createsuperuser
