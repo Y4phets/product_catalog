@@ -16,17 +16,30 @@ Django Rest Framework
 (корень проекта)$ python manage.py runserver
 ```
 # URL:
+Примеры ссылок
+```
+http://127.0.0.1:8000/admin/
+http://127.0.0.1:8000/product/
+http://127.0.0.1:8000/journal/
+http://127.0.0.1:8000/swagger/
+http://127.0.0.1:8000/product/#
+http://127.0.0.1:8000/journal/#
+```
 
 ```
 #product_catalog/urls.py
 
+schema_view = get_swagger_view(title='Pastebin API')
+
 urlpatterns = [
+    path('swagger/', schema_view),             //для swagger
     path('admin/', admin.site.urls),           //для входа под аминистратором
     path('product/', include('product.urls')), //подключение urls товаров и указание начального маршрута
     path('journal/', include('journal.urls')), //подключение urls журнала и указание начального маршрута
 ]
 
 #product/urls.py
+
 
 urlpatterns = [
     path('', views.ProductList.as_view()),            //страница расположена на product/
