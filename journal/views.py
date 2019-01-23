@@ -1,5 +1,4 @@
 # journal/views.py
-import django_filters
 from rest_framework import generics
 from .models import Journal
 from .serializers import JournalSerializer

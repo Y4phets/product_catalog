@@ -19,7 +19,7 @@ class Journal(models.Model):
     goods_operation = models.CharField(max_length=13, choices=GOODS_OPERATION_CHOICES, default=goods_in)
 
     def __str__(self):
-        return "%s" % self.product.is_new
+        return "%s" % self.id
 
     class Meta:
         verbose_name = 'Журнал прихода/ухода'

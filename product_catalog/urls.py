@@ -1,5 +1,4 @@
 # product_catalog/urls.py
-
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework_swagger.views import get_swagger_view
