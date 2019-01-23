@@ -22,6 +22,4 @@ http://127.0.0.1:8000/admin/
 http://127.0.0.1:8000/product/
 http://127.0.0.1:8000/journal/
 http://127.0.0.1:8000/swagger/
-http://127.0.0.1:8000/product/#
-http://127.0.0.1:8000/journal/#
 ```
