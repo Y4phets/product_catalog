@@ -5,6 +5,5 @@ from . import views
 
 urlpatterns = [
     path('', views.JournalList.as_view()),
-    # path('new', views.JournalNewList.as_view()),
     path('<int:pk>/', views.JournalDetail.as_view()),
 ]

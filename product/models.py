@@ -23,8 +23,6 @@ class ProductImage(models.Model):
     image = models.ImageField(upload_to='products_images/')
     created_at = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated_at = models.DateTimeField(auto_now_add=False, auto_now=True)
-    image_height = models.PositiveIntegerField(default=0)
-    image_width = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return "%s" % self.id
@@ -32,12 +30,3 @@ class ProductImage(models.Model):
     class Meta:
         verbose_name = 'Фотография'
         verbose_name_plural = 'Фотографии'
-
-    # def save(self, *args, **kwargs):
-    #     image = self.image
-    #     size = image.size
-    #     print(size)
-    #     # self.image_height = height
-    #     # self.image_width = width
-    #
-    #     super(ProductImage, self).save(*args, **kwargs)

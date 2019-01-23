@@ -4,7 +4,7 @@ from product.models import Product
 
 
 class Journal(models.Model):
-    product = models.ForeignKey(Product, related_name='images', blank=True,
+    product = models.ForeignKey(Product, blank=True,
                                 null=True, default=None, on_delete=models.CASCADE)
     cnt = models.IntegerField(default=1)
     customer_email = models.EmailField(blank=True, null=True, default=None)
@@ -19,7 +19,7 @@ class Journal(models.Model):
     goods_operation = models.CharField(max_length=13, choices=GOODS_OPERATION_CHOICES, default=goods_in)
 
     def __str__(self):
-        return "%s" % self.product.name
+        return "%s" % self.product.is_new
 
     class Meta:
         verbose_name = 'Журнал прихода/ухода'

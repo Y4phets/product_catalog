@@ -5,7 +5,7 @@ from .models import Journal
 
 
 class JournalAdmin(admin.ModelAdmin):
-    list_display = [field.name for field in Journal._meta.fields]
+    list_display = ('id', 'product', 'cnt', 'customer_email', 'created_at', 'updated_at', 'goods_operation')
 
     class Meta:
         model = Journal
