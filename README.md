@@ -29,7 +29,7 @@ http://127.0.0.1:8000/journal/#
 ```
 #product_catalog/urls.py
 
-schema_view = get_swagger_view(title='Pastebin API')
+schema_view = get_swagger_view(title='Documentation')
 
 urlpatterns = [
     path('swagger/', schema_view),             //для swagger
