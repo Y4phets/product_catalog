@@ -38,6 +38,7 @@ env/
 build/
 develop-eggs/
 dist/
+.ide/
 downloads/
 product_images/
 eggs/
@@ -85,6 +86,5 @@ target/
 *.pyc
 __pycache__/
 local_settings.py
-/.ide
 .env
 db.sqlite3
