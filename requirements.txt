@@ -4,5 +4,3 @@ django-filter==2.0.0
 djangorestframework==3.9.1
 Pillow==5.2.0
 PyYAML==3.13
-
-
