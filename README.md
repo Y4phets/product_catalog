@@ -25,31 +25,3 @@ http://127.0.0.1:8000/swagger/
 http://127.0.0.1:8000/product/#
 http://127.0.0.1:8000/journal/#
 ```
-
-```
-#product_catalog/urls.py
-
-schema_view = get_swagger_view(title='Documentation')
-
-urlpatterns = [
-    path('swagger/', schema_view),             //для swagger
-    path('admin/', admin.site.urls),           //для входа под аминистратором
-    path('product/', include('product.urls')), //подключение urls товаров и указание начального маршрута
-    path('journal/', include('journal.urls')), //подключение urls журнала и указание начального маршрута
-]
-
-#product/urls.py
-
-
-urlpatterns = [
-    path('', views.ProductList.as_view()),            //страница расположена на product/
-    path('<int:pk>/', views.ProductDetail.as_view()), //по первичному ключу записи, страница расположена на product/# 
-]
-
-#journal/urls.py
-
-urlpatterns = [
-    path('', views.JournalList.as_view()),            //страница расположена на journal/
-    path('<int:pk>/', views.JournalDetail.as_view()), //по первичному ключу записи, страница расположена на journal/# 
-]
-```
