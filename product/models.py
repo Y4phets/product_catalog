@@ -9,6 +9,9 @@ class Product(models.Model):
     updated_at = models.DateTimeField(auto_now_add=False, auto_now=True)
     is_new = models.BooleanField(default=True)
 
+    def get_name(self):
+        return 'SKU=' + self.sku + ' belongs to ' + self.name + '.'
+
     def __str__(self):
         return self.name
 
