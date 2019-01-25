@@ -1,4 +1,4 @@
-# product_catalog
+# Product_catalog
 Django Rest Framework
 После зугрузки из GIT'a для запуска проекта нужно:
 
@@ -30,9 +30,7 @@ http://127.0.0.1:8000/journal/
 http://127.0.0.1:8000/swagger/
 ```
 # Запустить unit test'ы
+## Обязательно закомментируйте все атрибуты в разделе REST_FRAMEWORK файла settings.py
 ```
-Закомментировать в settings.py:
-    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
-    'PAGINATE_BY': 10,
 (корень проекта)$ python manage.py test
 ```
