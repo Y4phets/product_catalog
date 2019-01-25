@@ -59,18 +59,15 @@ class CreateNewProductTest(TestCase):
 
     def setUp(self):
         self.valid_payload = {
-            "name": "Apple",
-            "sku": "371421531324",
-            "created_at": "2019-01-22T12:37:47",
-            "updated_at": "2019-01-22T15:37:47",
+            "name": "apple",
+            "sku": "3474561058254",
             "is_new": False,
-        },
+        }
+
         self.invalid_payload = {
             "name": "",
-            "sku": "371442531324",
-            "created_at": "",
-            "updated_at": "",
-            "is_new": False,
+            "sku": "3714425313240",
+            "is_new": True,
         }
 
     def test_create_valid_product(self):
@@ -94,18 +91,21 @@ class UpdateSingleProductTest(TestCase):
 
     def setUp(self):
         self.apple = Product.objects.create(
-            name='apple', sku=371421531324, is_new=True)
+            name='apple', sku=3474561058254, created_at='2019-01-22T12:37:47',
+            updated_at='2019-01-22T14:37:47', is_new=True)
         self.orange = Product.objects.create(
-            name='orange', sku=9921473019423, is_new=False)
+            name='orange', sku=9921473019423, created_at='2019-01-22T13:37:47',
+            updated_at='2019-01-22T15:37:47', is_new=False)
 
         self.valid_payload = {
             "name": "apple",
-            "sku": "371421531324",
-            "is_new": False,
-        },
+            "sku": "4214561058254",
+            "is_new": True,
+        }
+
         self.invalid_payload = {
             "name": "",
-            "sku": "371442531324",
+            "sku": "9921473019423",
             "is_new": False,
         }
 

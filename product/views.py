@@ -39,9 +39,9 @@ def get_post_products(request):
 
     if request.method == 'POST':
         data = {
-            "name": request.data.get("name"),
-            "sku": request.data.get("sku"),
-            "is_new": request.data.get("is_new")
+            'name': request.data.get('name'),
+            'sku': request.data.get('sku'),
+            'is_new': bool(request.data.get('is_new'))
         }
         serializer = ProductSerializer(data=data)
         if serializer.is_valid():
