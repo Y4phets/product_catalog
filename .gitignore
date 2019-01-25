@@ -40,7 +40,7 @@ develop-eggs/
 dist/
 .idea/
 downloads/
-product_images/
+products_images/
 eggs/
 lib/
 lib64/
